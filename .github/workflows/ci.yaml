@@ -13,10 +13,10 @@ jobs:
     name: 'Build and Push'
     runs-on: ${{ matrix.os }}
 
-     strategy:
-            matrix:
-                node-version: [18, 20, 22]
-                os: [ubuntu-latest, windows-latest, macos-latest]
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - name: Checkout source code
@@ -33,5 +33,3 @@ jobs:
 
       - name: Test
         run: npm test
-
-  
